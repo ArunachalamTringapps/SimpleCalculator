@@ -67,6 +67,7 @@ public class Calculator {
                     double finalResult3 = result;
                     l.log(Level.INFO, () -> "Result: " + finalResult3);
                 }
+                default -> l.warning("Thanks for coming");
             }
             l.info("If you need to use old answer Y(or)N :");
             char re=sc.next().charAt(0);
