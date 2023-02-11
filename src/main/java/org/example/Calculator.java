@@ -36,6 +36,7 @@ class Calculation extends Inputs{
 }
 public class Calculator {
     public static void main(String[] args) {
+        String word="Result: ";
         Logger l=Logger.getLogger("arun");
         Scanner sc=new Scanner(System.in);
         l.info("Welcome to simple Calculation");
@@ -50,22 +51,22 @@ public class Calculator {
                 case '+' -> {
                     result = i.add();
                     double finalResult = result;
-                    l.log(Level.INFO, () -> "Result: " + finalResult);
+                    l.log(Level.INFO, () ->  word + finalResult);
                 }
                 case '-' -> {
                     result = i.sub();
                     double finalResult1 = result;
-                    l.log(Level.INFO, () -> "Result: " + finalResult1);
+                    l.log(Level.INFO, () -> word + finalResult1);
                 }
                 case '*' -> {
                     result = i.multi();
                     double finalResult2 = result;
-                    l.log(Level.INFO, () -> "Result: " + finalResult2);
+                    l.log(Level.INFO, () -> word+ finalResult2);
                 }
                 case '/' -> {
                     result = i.div();
                     double finalResult3 = result;
-                    l.log(Level.INFO, () -> "Result: " + finalResult3);
+                    l.log(Level.INFO, () -> word + finalResult3);
                 }
                 default -> l.warning("Thanks for coming");
             }
