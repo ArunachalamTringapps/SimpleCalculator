@@ -3,41 +3,12 @@ package org.example;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-class Inputs{
-    protected double a;
-    protected double b;
-    Logger l=Logger.getLogger("arun");
-    Scanner sc=new Scanner(System.in);
-    public void inputs(){
-        if(a==0) {
-            l.info("Enter the first no");
-            a = sc.nextDouble();
-            l.info("Enter the second no");
-        }
-        else {
-            l.info("Enter the second no:");
-        }
-        b = sc.nextDouble();
-    }
-}
-class Calculation extends Inputs{
-    protected double add(){
-        return a+b;
-    }
-    protected double sub(){
-        return a-b;
-    }
-    protected double multi(){
-        return a*b;
-    }
-    protected double div(){
-        return a/b;
-    }
-}
+
+
 public class Calculator {
     public static void main(String[] args) {
         String word="Result: ";
-        Logger l=Logger.getLogger("arun");
+        Logger l=Logger.getLogger(Calculator.class.getName());
         Scanner sc=new Scanner(System.in);
         l.info("Welcome to simple Calculation");
         Calculation i=new Calculation();
